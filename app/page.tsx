@@ -3,6 +3,8 @@ import SearchBarWrapper from '@/components/SearchBarWrapper';
 import { Sparkles, Crown, Zap } from 'lucide-react';
 import { Suspense } from 'react';
 
+export const dynamic = 'force-dynamic';
+
 async function BatchesSection() {
   const batches = await getBatches();
   return <SearchBarWrapper initialBatches={batches} />;
@@ -68,3 +70,4 @@ export default function HomePage() {
     </div>
   );
 }
+
