@@ -3,6 +3,8 @@ import TopicContentWrapper from '@/components/TopicContentWrapper';
 import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 export default async function TopicPage({ params }: { params: Promise<{ batchId: string, topicId: string }> }) {
   const { batchId, topicId } = await params;
   const details = await getTopicDetails(batchId, topicId);
