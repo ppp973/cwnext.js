@@ -24,7 +24,7 @@ export default function HomePage() {
         <div className="text-center mb-20 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">
             <Crown className="w-3 h-3" />
-            Career Will Official
+            VIPSTUDY 
           </div>
           
           <h1 className="text-5xl md:text-7xl font-black font-display tracking-tighter leading-[1.1]">
@@ -34,27 +34,7 @@ export default function HomePage() {
             </span>
           </h1>
           
-          <p className="text-zinc-500 text-sm md:text-base max-w-xl mx-auto font-medium leading-relaxed">
-            Access exclusive expert-led batches and comprehensive study materials designed by Raj for high achievers.
-          </p>
 
-          <div className="flex items-center justify-center gap-6 pt-4">
-            <div className="flex flex-col items-center">
-              <span className="text-2xl font-bold text-white">500+</span>
-              <span className="text-[10px] text-zinc-600 uppercase tracking-widest font-bold">Batches</span>
-            </div>
-            <div className="w-px h-8 bg-white/10" />
-            <div className="flex flex-col items-center">
-              <span className="text-2xl font-bold text-white">10k+</span>
-              <span className="text-[10px] text-zinc-600 uppercase tracking-widest font-bold">Students</span>
-            </div>
-            <div className="w-px h-8 bg-white/10" />
-            <div className="flex flex-col items-center">
-              <span className="text-2xl font-bold text-white">24/7</span>
-              <span className="text-[10px] text-zinc-600 uppercase tracking-widest font-bold">Support</span>
-            </div>
-          </div>
-        </div>
 
         {/* Search & Batches Section */}
         <div className="relative">
