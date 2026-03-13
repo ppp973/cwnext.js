@@ -33,8 +33,7 @@ export default function HomePage() {
               Future Today
             </span>
           </h1>
-          
-
+        </div> {/* Added missing closing div */}
 
         {/* Search & Batches Section */}
         <div className="relative">
@@ -46,8 +45,7 @@ export default function HomePage() {
             <BatchesSection />
           </Suspense>
         </div>
-      </div>
+      </div> {/* Added missing closing div */}
     </div>
   );
 }
-
