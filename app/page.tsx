@@ -28,9 +28,9 @@ export default function HomePage() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-black font-display tracking-tighter leading-[1.1]">
-            Master Your <br />
+            CAREER WILL  <br />
             <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent italic">
-              Future Today
+              PAID BATCHES FREE
             </span>
           </h1>
         </div> {/* Added missing closing div */}
