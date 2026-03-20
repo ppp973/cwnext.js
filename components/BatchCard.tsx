@@ -1,9 +1,9 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronRight, Video, FileText } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { Batch } from '@/lib/api';
 
 interface BatchCardProps {
@@ -12,37 +12,50 @@ interface BatchCardProps {
 }
 
 export default function BatchCard({ batch, index }: BatchCardProps) {
-  // Personal photo placeholder
   const personalPhoto = `https://th.bing.com/th/id/OIP.4F6qEJS83WVEcmU1jyPOLwHaHa?w=203&h=203&c=7&r=0&o=7&pid=1.7&rm=3`;
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: index * 0.03 }}
-      whileHover={{ scale: 1.01 }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.04 }}
+      whileHover={{ scale: 1.03 }}
       className="group"
     >
       <Link href={`/batch/${batch.id}`}>
-        <div className="glass glass-hover py-6 px-5 rounded-2xl flex items-center gap-5 transition-all duration-300 h-full border border-white/5 hover:border-white/10 w-full min-h-[110px]">
-          <div className="relative w-16 h-16 rounded-full overflow-hidden border border-white/10 shrink-0 group-hover:border-emerald-500/50 transition-colors shadow-lg">
+        <div className="relative flex items-center gap-4 p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden">
+          
+          {/* Glow Effect */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-emerald-500/10 via-transparent to-cyan-500/10" />
+
+          {/* Profile Image */}
+          <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shrink-0 group-hover:border-emerald-400 transition">
             <Image
               src={personalPhoto}
-              alt="Batch Instructor"
+              alt="Batch"
               fill
-              className="object-cover transition-all duration-500"
+              className="object-cover"
               referrerPolicy="no-referrer"
             />
           </div>
-          
-          <div className="flex-grow min-w-0 flex flex-col justify-center">
-            <h3 className="text-white font-bold text-lg truncate group-hover:text-emerald-400 transition-colors">
+
+          {/* Content */}
+          <div className="flex-grow min-w-0">
+            
+            {/* 🔥 SHORT TITLE */}
+            <h3 className="text-sm font-semibold text-white truncate group-hover:text-emerald-400 transition">
               {batch.name}
             </h3>
+
+            {/* Small Subtitle */}
+            <p className="text-[10px] text-zinc-400 truncate">
+              Premium Batch
+            </p>
           </div>
 
-          <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-500 group-hover:bg-emerald-500/10 group-hover:text-emerald-400 transition-colors shrink-0">
-            <ChevronRight className="w-5 h-5" />
+          {/* Arrow */}
+          <div className="w-8 h-8 rounded-full flex items-center justify-center bg-white/5 text-zinc-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-400 transition shrink-0">
+            <ChevronRight className="w-4 h-4" />
           </div>
         </div>
       </Link>
